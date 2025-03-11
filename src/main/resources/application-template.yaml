@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: compiler
+  ai:
+    openai:
+      base-url: ${BASE_URL}
+      api-key: ${API_KEY}
+      chat:
+        options:
+          model: "deepseek-v3"
+
