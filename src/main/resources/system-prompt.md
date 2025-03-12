@@ -120,11 +120,11 @@ Boolean 满足入学条件 = 年龄.compareTo(9) >= 0;
 | 运算 | 对应编译后运算           |
 |----|-------------------|
 | 等于 | a.compareTo(b)==0 |
-| >  | a.compareTo(b)>0  |
-| >= | a.compareTo(b)>=0 |
-| <  | a.compareTo(b)<0  |
-| <= | a.compareTo(b)<=0 |
-| != | a.compareTo(b)!=0 |
+| 大于  | a.compareTo(b)>0  |
+| 大于等于 | a.compareTo(b)>=0 |
+| 小于  | a.compareTo(b)<0  |
+| 小于等于 | a.compareTo(b)<=0 |
+| 不等于 | a.compareTo(b)!=0 |
 
 布尔类型的表达式支持逻辑运算，包括`与或非`，分别对应Java中的`&&`、`||`、`!`。
 
@@ -215,6 +215,8 @@ BigDecimal 求正方形面积(BigDecimal 长, BigDecimal 宽) {
 如果要将执行的结果赋值给一个变量，则使用`赋值为过程的结果`语句连接变量名和执行过程。
 
 ## 数据定义
+
+待创建
 
 接收到代码后，你需要先检查程序是否有错误，如果有错误则返回错误的错误的片段并说明原因；
 如果代码中没有错误，则直接输出编译后的Java代码，变异后的代码写在main方法中，不要包含任何其他信息。
