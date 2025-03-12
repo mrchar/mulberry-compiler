@@ -15,10 +15,22 @@ public class CompilerService {
   }
 
   public Flux<String> compile(String input) {
-    return this.chatClient.prompt().user(input).stream().content();
+    // 接收到代码后，你需要先检查程序是否有错误，如果有错误则返回错误的错误的片段并说明原因；
+    // 如果代码中没有错误，则直接输出编译后的Java代码，变异后的代码写在main方法中，不要包含任何其他信息。
+    return this.chatClient
+        .prompt()
+        .user(
+            u -> u.text(ResourceUtils.getText("classpath:./user-prompt.md")).param("input", input))
+        .stream()
+        .content();
   }
 
   public String syncCompile(String input) {
-    return this.chatClient.prompt().user(input).call().content();
+    return this.chatClient
+        .prompt()
+        .user(
+            u -> u.text(ResourceUtils.getText("classpath:./user-prompt.md")).param("input", input))
+        .call()
+        .content();
   }
 }
